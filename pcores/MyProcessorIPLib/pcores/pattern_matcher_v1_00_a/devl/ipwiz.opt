@@ -1,0 +1,9 @@
+-batch 
+-create pattern_matcher 
+-ver 1.00.a 
+-dir "C:\Users\C15Kevin.Cooper\Desktop\Documents\ECE383\final_project_2\pcores\MyProcessorIPLib" 
+-lang vhdl 
+-bus axi4lite s 
+-reg 1 
+-xps 
+-ise 

@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/pcores/MyProcessorIPLib/pcores/pattern_matcher_v1_00_a/data/pattern_matcher_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue May 06 23:04:53 2014 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib axi_lite_ipif_v1_01_a  all 
+lib pattern_matcher_v1_00_a user_logic vhdl
+lib pattern_matcher_v1_00_a pattern_matcher vhdl
