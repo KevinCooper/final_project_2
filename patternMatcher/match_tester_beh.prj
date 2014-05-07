@@ -1,0 +1,5 @@
+vhdl work "template_matcher_struct.vhd"
+vhdl work "shifter.vhd"
+vhdl work "matcher_struct.vhd"
+vhdl work "pattern.vhd"
+vhdl work "match_tester.vhd"

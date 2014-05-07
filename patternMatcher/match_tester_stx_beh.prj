@@ -1,0 +1,5 @@
+vhdl isim_temp "template_matcher_struct.vhd"
+vhdl isim_temp "shifter.vhd"
+vhdl isim_temp "matcher_struct.vhd"
+vhdl isim_temp "pattern.vhd"
+vhdl isim_temp "match_tester.vhd"

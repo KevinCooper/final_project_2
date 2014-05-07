@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/match_tester_isim_beh.exe" -prj "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/match_tester_beh.prj" "work.match_tester" 

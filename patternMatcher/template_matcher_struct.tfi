@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+template_matcher_struct instance_name (
+    .data_in(data_in), 
+    .match(match)
+    );
+
+

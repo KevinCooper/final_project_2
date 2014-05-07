@@ -1,0 +1,1 @@
+vhdtdtfi -prj patternMatcher -o C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/template_matcher_struct.tfi -module template_matcher_struct -template C:/Xilinx/14.2/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work template_matcher_struct.vhd 
