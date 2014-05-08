@@ -56,6 +56,9 @@ Loading design module
 n/system_axi_timer_0_wrapper.ngc"...
 Loading design module
 "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/implementatio
+n/system_pattern_matcher_0_wrapper.ngc"...
+Loading design module
+"C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/implementatio
 n/system_microblaze_0_bram_block_wrapper.ngc"...
 Applying constraints in
 "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/implementatio
@@ -162,10 +165,10 @@ WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6000.000000000 pS
 
 WARNING:NgdBuild:1012 - The constraint <NET "zio" IOSTANDARD = "SSTL18_II"> is
    overridden on the design object zio by the constraint <NET zio IOSTANDARD =
-   "LVCMOS18_JEDEC";> [system.ucf(27)].
+   "LVCMOS18_JEDEC";> [system.ucf(37)].
 WARNING:NgdBuild:1012 - The constraint <NET "rzq" IOSTANDARD = "SSTL18_II"> is
    overridden on the design object rzq by the constraint <NET rzq IOSTANDARD =
-   "LVCMOS18_JEDEC";> [system.ucf(26)].
+   "LVCMOS18_JEDEC";> [system.ucf(36)].
 Done...
 
 Processing BMM file "system.bmm" ...
@@ -211,10 +214,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  34
 
-Total memory usage is 244852 kilobytes
+Total memory usage is 246580 kilobytes
 
 Writing NGD file "system.ngd" ...
-Total REAL time to NGDBUILD completion:  59 sec
-Total CPU time to NGDBUILD completion:   59 sec
+Total REAL time to NGDBUILD completion: 1 min  1 sec
+Total CPU time to NGDBUILD completion:  1 min  0 sec
 
 Writing NGDBUILD log file "system.bld"...

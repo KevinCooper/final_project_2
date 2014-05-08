@@ -1,13 +1,13 @@
-Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/match_tester_isim_beh.exe -prj C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/match_tester_beh.prj work.match_tester 
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/match_tester_isim_beh.exe -prj C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/match_tester_beh.prj work.match_tester 
 ISim P.28xd (signature 0xa0883be4)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/template_matcher_struct.vhd" into library work
-Parsing VHDL file "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/shifter.vhd" into library work
-Parsing VHDL file "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/matcher_struct.vhd" into library work
-Parsing VHDL file "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/pattern.vhd" into library work
-Parsing VHDL file "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/match_tester.vhd" into library work
+Parsing VHDL file "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/template_matcher_struct.vhd" into library work
+Parsing VHDL file "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/shifter.vhd" into library work
+Parsing VHDL file "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/matcher_struct.vhd" into library work
+Parsing VHDL file "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/pattern.vhd" into library work
+Parsing VHDL file "C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/match_tester.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
@@ -22,6 +22,6 @@ Compiling architecture behavior of entity match_tester
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 13 VHDL Units
-Built simulation executable C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/match_tester_isim_beh.exe
-Fuse Memory Usage: 46204 KB
-Fuse CPU Usage: 1481 ms
+Built simulation executable C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/match_tester_isim_beh.exe
+Fuse Memory Usage: 46172 KB
+Fuse CPU Usage: 780 ms

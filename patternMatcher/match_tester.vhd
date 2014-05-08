@@ -15,7 +15,8 @@ ARCHITECTURE behavior OF match_tester IS
          reset : IN  std_logic;
          test : IN  std_logic_vector(7 downto 0);
 			alt  : in 	std_logic;
-         bad : OUT  std_logic
+         bad : OUT  std_logic;
+			debug: out STD_LOGIC_vector(7 downto 0)
         );
     END COMPONENT;
     
@@ -27,7 +28,7 @@ ARCHITECTURE behavior OF match_tester IS
 	signal alt	: std_logic := '0';
  	--Outputs
    signal bad : std_logic;
-
+	signal debug: std_logic_vector(7 downto 0);
    -- Clock period definitions
    constant clk_period : time := 10 ns;
  
@@ -36,10 +37,11 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT)
    uut: pattern PORT MAP (
           clk => clk,
-          reset => reset,
+          reset => '0',
           test => test,
 			 alt => alt,
-          bad => bad
+          bad => bad,
+			 debug => debug
         );
 
    -- Clock process definitions

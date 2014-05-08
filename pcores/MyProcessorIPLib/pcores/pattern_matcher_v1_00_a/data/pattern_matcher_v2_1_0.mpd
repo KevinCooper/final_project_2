@@ -57,11 +57,6 @@ PORT S_AXI_BVALID = BVALID, DIR = O, BUS = S_AXI
 PORT S_AXI_AWREADY = AWREADY, DIR = O, BUS = S_AXI
 
 ## My ports
-PORT clk = "", DIR = O, VEC=[7:0]
-PORT reset = "", DIR = O, VEC=[7:0]
-PORT test = "", DIR = O, VEC=[7:0]
-PORT alt = "", DIR = O, VEC=[7:0]
-PORT bad = "", DIR = I, VEC=[7:0]
-PORT debug = "", DIR = I, VEC=[7:0]
+PORT LED = "", DIR = O, VEC=[7:0]
 
 END

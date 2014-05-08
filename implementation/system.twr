@@ -35,7 +35,7 @@ ns;
 
  1 net analyzed, 0 failing nets detected.
  0 timing errors detected.
- Maximum net skew is   1.597ns.
+ Maximum net skew is   1.622ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -45,7 +45,7 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  166 paths analyzed, 111 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   8.285ns.
+ Minimum period is  14.517ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -53,7 +53,7 @@ Timing constraint: NET "Ethernet_Lite_RX_CLK_IBUF" MAXSKEW = 6 ns;
 
  1 net analyzed, 0 failing nets detected.
  0 timing errors detected.
- Maximum net skew is   3.409ns.
+ Maximum net skew is   3.423ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -62,7 +62,7 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  143 paths analyzed, 132 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  16.517ns.
+ Minimum period is  20.474ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -210,9 +210,9 @@ PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2"
 TS_sys_clk_pin         HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 504897 paths analyzed, 19346 endpoints analyzed, 0 failing endpoints
+ 506364 paths analyzed, 19789 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   9.569ns.
+ Minimum period is   9.935ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -232,11 +232,11 @@ Derived Constraints for TS_sys_clk_pin
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_pin                 |     10.000ns|      3.334ns|      9.569ns|            0|            0|            0|       504897|
+|TS_sys_clk_pin                 |     10.000ns|      3.334ns|      9.935ns|            0|            0|            0|       506364|
 | TS_clk_600_0000MHz180PLL0_nobu|      1.667ns|      1.499ns|          N/A|            0|            0|            0|            0|
 | f                             |             |             |             |             |             |             |             |
 | TS_clk_600_0000MHzPLL0_nobuf  |      1.667ns|      1.499ns|          N/A|            0|            0|            0|            0|
-| TS_clock_generator_0_clock_gen|     10.000ns|      9.569ns|          N/A|            0|            0|       504897|            0|
+| TS_clock_generator_0_clock_gen|     10.000ns|      9.935ns|          N/A|            0|            0|       506364|            0|
 | erator_0_SIG_PLL0_CLKOUT2     |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -254,10 +254,10 @@ Source              | clk (edge) |   Corner   | clk (edge) |   Corner   |Interna
 --------------------+------------+------------+------------+------------+-------------------------+--------+
 Ethernet_Lite_RXD<0>|   -0.186(R)|      FAST  |    1.216(R)|      SLOW  |Ethernet_Lite_RX_CLK_IBUF|   0.000|
 Ethernet_Lite_RXD<1>|   -0.336(R)|      FAST  |    1.474(R)|      SLOW  |Ethernet_Lite_RX_CLK_IBUF|   0.000|
-Ethernet_Lite_RXD<2>|   -0.998(R)|      FAST  |    2.457(R)|      SLOW  |Ethernet_Lite_RX_CLK_IBUF|   0.000|
-Ethernet_Lite_RXD<3>|   -2.120(R)|      FAST  |    4.465(R)|      SLOW  |Ethernet_Lite_RX_CLK_IBUF|   0.000|
-Ethernet_Lite_RX_DV |   -0.888(R)|      FAST  |    2.271(R)|      SLOW  |Ethernet_Lite_RX_CLK_IBUF|   0.000|
-Ethernet_Lite_RX_ER |   -0.919(R)|      FAST  |    2.334(R)|      SLOW  |Ethernet_Lite_RX_CLK_IBUF|   0.000|
+Ethernet_Lite_RXD<2>|   -1.004(R)|      FAST  |    2.463(R)|      SLOW  |Ethernet_Lite_RX_CLK_IBUF|   0.000|
+Ethernet_Lite_RXD<3>|   -2.134(R)|      FAST  |    4.479(R)|      SLOW  |Ethernet_Lite_RX_CLK_IBUF|   0.000|
+Ethernet_Lite_RX_DV |   -0.902(R)|      FAST  |    2.285(R)|      SLOW  |Ethernet_Lite_RX_CLK_IBUF|   0.000|
+Ethernet_Lite_RX_ER |   -0.933(R)|      FAST  |    2.348(R)|      SLOW  |Ethernet_Lite_RX_CLK_IBUF|   0.000|
 --------------------+------------+------------+------------+------------+-------------------------+--------+
 
 Clock Ethernet_Lite_TX_CLK to Pad
@@ -265,11 +265,11 @@ Clock Ethernet_Lite_TX_CLK to Pad
                     |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                        | Clock  |
 Destination         |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                       | Phase  |
 --------------------+-----------------+------------+-----------------+------------+----------------------------------------+--------+
-Ethernet_Lite_TXD<0>|         6.999(F)|      SLOW  |         3.952(F)|      FAST  |Ethernet_Lite/Ethernet_Lite/phy_tx_clk_i|  14.000|
-Ethernet_Lite_TXD<1>|         7.130(F)|      SLOW  |         4.019(F)|      FAST  |Ethernet_Lite/Ethernet_Lite/phy_tx_clk_i|  14.000|
-Ethernet_Lite_TXD<2>|         6.772(F)|      SLOW  |         3.801(F)|      FAST  |Ethernet_Lite/Ethernet_Lite/phy_tx_clk_i|  14.000|
-Ethernet_Lite_TXD<3>|         8.283(F)|      SLOW  |         4.732(F)|      FAST  |Ethernet_Lite/Ethernet_Lite/phy_tx_clk_i|  14.000|
-Ethernet_Lite_TX_EN |         6.999(F)|      SLOW  |         3.952(F)|      FAST  |Ethernet_Lite/Ethernet_Lite/phy_tx_clk_i|  14.000|
+Ethernet_Lite_TXD<0>|         7.011(F)|      SLOW  |         3.964(F)|      FAST  |Ethernet_Lite/Ethernet_Lite/phy_tx_clk_i|  14.000|
+Ethernet_Lite_TXD<1>|         7.142(F)|      SLOW  |         4.031(F)|      FAST  |Ethernet_Lite/Ethernet_Lite/phy_tx_clk_i|  14.000|
+Ethernet_Lite_TXD<2>|         6.781(F)|      SLOW  |         3.810(F)|      FAST  |Ethernet_Lite/Ethernet_Lite/phy_tx_clk_i|  14.000|
+Ethernet_Lite_TXD<3>|         7.997(F)|      SLOW  |         4.516(F)|      FAST  |Ethernet_Lite/Ethernet_Lite/phy_tx_clk_i|  14.000|
+Ethernet_Lite_TX_EN |         7.011(F)|      SLOW  |         3.964(F)|      FAST  |Ethernet_Lite/Ethernet_Lite/phy_tx_clk_i|  14.000|
 --------------------+-----------------+------------+-----------------+------------+----------------------------------------+--------+
 
 Clock to Setup on destination clock Ethernet_Lite_RX_CLK
@@ -277,8 +277,8 @@ Clock to Setup on destination clock Ethernet_Lite_RX_CLK
                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------+---------+---------+---------+---------+
-Ethernet_Lite_RX_CLK|         |         |    5.781|    2.406|
-GCLK                |    6.655|         |    7.007|         |
+Ethernet_Lite_RX_CLK|         |         |    7.166|    2.306|
+GCLK                |    8.265|         |    6.769|         |
 --------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Ethernet_Lite_TX_CLK
@@ -286,8 +286,8 @@ Clock to Setup on destination clock Ethernet_Lite_TX_CLK
                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------+---------+---------+---------+---------+
-Ethernet_Lite_TX_CLK|    4.114|         |    2.900|         |
-GCLK                |    5.854|         |    6.053|         |
+Ethernet_Lite_TX_CLK|    4.081|         |    5.081|         |
+GCLK                |    6.266|         |    8.008|         |
 --------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock GCLK
@@ -295,9 +295,9 @@ Clock to Setup on destination clock GCLK
                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------+---------+---------+---------+---------+
-Ethernet_Lite_RX_CLK|         |    3.103|         |         |
-Ethernet_Lite_TX_CLK|    2.840|         |         |         |
-GCLK                |    9.569|         |         |         |
+Ethernet_Lite_RX_CLK|         |    2.264|         |         |
+Ethernet_Lite_TX_CLK|    4.477|         |         |         |
+GCLK                |    9.935|         |         |         |
 --------------------+---------+---------+---------+---------+
 
 
@@ -306,22 +306,22 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 505439 paths, 2 nets, and 23903 connections
+Constraints cover 506906 paths, 2 nets, and 24559 connections
 
 Design statistics:
-   Minimum period:  16.517ns   (Maximum frequency:  60.544MHz)
+   Minimum period:  20.474ns   (Maximum frequency:  48.842MHz)
    Maximum path delay from/to any node:   3.456ns
-   Maximum net skew:   3.409ns
+   Maximum net skew:   3.423ns
 
 
-Analysis completed Fri May 02 11:02:25 2014 
+Analysis completed Thu May 08 01:39:34 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 381 MB
+Peak Memory Usage: 384 MB
 
 
 

@@ -21,7 +21,8 @@ src/echo.d: ../src/echo.c \
  ../../lwip_echo_server_bsp_0/microblaze_0/include/lwip/def.h \
  ../../lwip_echo_server_bsp_0/microblaze_0/include/lwip/ip_addr.h \
  ../../lwip_echo_server_bsp_0/microblaze_0/include/lwip/netif.h \
- ../../lwip_echo_server_bsp_0/microblaze_0/include/lwip/icmp.h
+ ../../lwip_echo_server_bsp_0/microblaze_0/include/lwip/icmp.h \
+ ../../lwip_echo_server_bsp_0/microblaze_0/include/xil_io.h
 
 ../../lwip_echo_server_bsp_0/microblaze_0/include/xuartlite_l.h:
 
@@ -68,3 +69,5 @@ src/echo.d: ../src/echo.c \
 ../../lwip_echo_server_bsp_0/microblaze_0/include/lwip/netif.h:
 
 ../../lwip_echo_server_bsp_0/microblaze_0/include/lwip/icmp.h:
+
+../../lwip_echo_server_bsp_0/microblaze_0/include/xil_io.h:

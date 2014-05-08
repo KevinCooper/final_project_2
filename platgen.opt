@@ -6,6 +6,8 @@ vhdl
 default
 -lp
 C:/Xilinx/Atlys_BSB_Support_v_3_6/Atlys_AXI_BSB_Support/lib/
+-lp
+pcores/
 -msg
 __xps/ise/xmsgprops.lst
 system.mhs

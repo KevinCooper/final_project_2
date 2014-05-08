@@ -4,7 +4,7 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> 
 TABLE OF CONTENTS
@@ -35,7 +35,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "system_axi_timer_0_wrapper_xst.prj"
-Verilog Include Directory          : {"C:\Users\C15Kevin.Cooper\Desktop\Documents\ECE383\final_project_2\pcores\" "C:\Xilinx\Atlys_BSB_Support_v_3_6\Atlys_AXI_BSB_Support\lib\Digilent\pcores\" "C:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+Verilog Include Directory          : {"C:\Users\C15Kevin.Cooper\Desktop\Documents\ECE383\final_project_2\pcores\" "C:\Xilinx\Atlys_BSB_Support_v_3_6\Atlys_AXI_BSB_Support\lib\Digilent\pcores\" "C:\Users\C15Kevin.Cooper\Desktop\Documents\ECE383\final_project_2\pcores\MyProcessorIPLib\pcores\" "C:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
 
 ---- Target Parameters
 Target Device                      : xc6slx45csg324-3
@@ -1032,8 +1032,8 @@ S_AXI_ACLK     |    5.383|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 13.67 secs
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.79 secs
  
 --> 
 

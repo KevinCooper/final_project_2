@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>pattern - Behavioral (C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/pattern.vhd)</SelectedItem>
+         <SelectedItem>pattern - Behavioral (C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/pattern.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b4000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b40000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>pattern - Behavioral (C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/pattern.vhd)</CurrentItem>
+      <CurrentItem>pattern - Behavioral (C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/pattern.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -71,7 +71,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d3000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d30000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>View Technology Schematic</CurrentItem>
    </ItemView>
@@ -81,13 +81,13 @@
          <ClosedNode>/TB_STD_FIFO - behavior C:|Users|C15Kevin.Cooper|Desktop|Documents|ECE383|patternMatcher|fif_test.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>match_tester - behavior (C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/match_tester.vhd)</SelectedItem>
+         <SelectedItem>match_tester - behavior (C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/match_tester.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001c8000000020000000000000000000000000200000064ffffffff000000810000000300000002000001c80000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>match_tester - behavior (C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/patternMatcher/match_tester.vhd)</CurrentItem>
+      <CurrentItem>match_tester - behavior (C:/Users/C15Kevin.Cooper/Desktop/Documents/ECE383/final_project_2/patternMatcher/match_tester.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -99,7 +99,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d3000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d30000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
@@ -112,10 +112,10 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d3000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d30000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
 </Project>

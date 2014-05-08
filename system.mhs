@@ -45,6 +45,7 @@
  PORT Ethernet_Lite_MDC = Ethernet_Lite_MDC, DIR = O
  PORT Ethernet_Lite_CRS = Ethernet_Lite_CRS, DIR = I
  PORT Ethernet_Lite_COL = Ethernet_Lite_COL, DIR = I
+ PORT pattern_matcher_0_LED_pin = pattern_matcher_0_LED, DIR = O, VEC = [7:0]
 
 
 BEGIN proc_sys_reset
@@ -283,5 +284,15 @@ BEGIN axi_ethernetlite
  PORT PHY_crs = Ethernet_Lite_CRS
  PORT PHY_col = Ethernet_Lite_COL
  PORT IP2INTC_Irpt = Ethernet_Lite_IP2INTC_Irpt
+END
+
+BEGIN pattern_matcher
+ PARAMETER INSTANCE = pattern_matcher_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x75e00000
+ PARAMETER C_HIGHADDR = 0x75e0ffff
+ BUS_INTERFACE S_AXI = axi4lite_0
+ PORT S_AXI_ACLK = clk_100_0000MHzPLL0
+ PORT LED = pattern_matcher_0_LED
 END
 

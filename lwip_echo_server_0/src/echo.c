@@ -23,35 +23,58 @@
 #include "lwip/err.h"
 #include "lwip/tcp.h"
 #include <string.h>
-const char sendString[] = "Received packet:";
+#include <xil_io.h>
+const char sendString[] = "Received packet contents:";
 
 void received_packet(struct pbuf *p) {
 	int i;
-	for (i = 0; i < strlen(sendString); i++){
-		XUartLite_SendByte(0x40600000, sendString[i]);
+	if (p->len > 2) {
+		xil_printf("Received packet. Size: %d. Contents:\r\n", p->len);
+		for (i = 0; i < p->len; i++) {
+			XUartLite_SendByte(0x40600000, *((char *) p->payload + i));
+		}
+		XUartLite_SendByte(0x40600000, 0x0A);
+		XUartLite_SendByte(0x40600000, 0x0D);
 	}
-	XUartLite_SendByte(0x40600000, 0x0A);
-	XUartLite_SendByte(0x40600000, 0x0D);
-	for(i = 0; i < p->len; i++){
-		XUartLite_SendByte(0x40600000, *((char *)p->payload+i));
+
+	long unsigned send = 0;
+	long unsigned test = 0x00010000;
+	for (i = 0; i < p->len; i++) {
+		send = *((char *) p->payload + i) + test;
+		Xil_Out32(0x75E00000, send);
+		if (test == 0x00010000) {
+			test = 0;
+		} else {
+			test = 0x00010000;
+		}
 	}
-	XUartLite_SendByte(0x40600000, 0x0A);
-	XUartLite_SendByte(0x40600000, 0x0D);
+
+	for (i = 0; i < 60; i++) {
+		send = test;
+		Xil_Out32(0x75E00000, send);
+		if (test == 0x00010000) {
+			test = 0;
+		} else {
+			test = 0x00010000;
+		}
+		long unsigned debug = Xil_In32(0x75E00000);
+		if (debug >> 31 != 0) {
+			xil_printf("I found a bad packet. debug:%d\r\n\r\n\r\n",
+					(26 - i > 0) ? 26 - i : 0);
+		}
+	}
 }
 
 int transfer_data() {
 	return 0;
 }
 
-void print_app_header()
-{
+void print_app_header() {
 	xil_printf("\n\r\n\r-----Hardware Based IDS Sensor------\n\r");
-	xil_printf("TCP packets will be matched to a snort IDS rule\n\r");
+	xil_printf("TCP packets will be matched to an IDS rule\n\r");
 }
 
-err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
-                               struct pbuf *p, err_t err)
-{
+err_t recv_callback(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err) {
 	/* do not read the packet if we are not in ESTABLISHED state */
 	if (!p) {
 		tcp_close(tpcb);
@@ -76,16 +99,15 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 	return ERR_OK;
 }
 
-err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err)
-{
+err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err) {
 	static int connection = 1;
 
 	/* set the receive callback for this connection */
 	tcp_recv(newpcb, recv_callback);
 
 	/* just use an integer number indicating the connection id as the
-	   callback argument */
-	tcp_arg(newpcb, (void*)connection);
+	 callback argument */
+	tcp_arg(newpcb, (void*) connection);
 
 	/* increment for subsequent accepted connections */
 	connection++;
@@ -93,9 +115,7 @@ err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err)
 	return ERR_OK;
 }
 
-
-int start_application()
-{
+int start_application() {
 	struct tcp_pcb *pcb;
 	err_t err;
 	unsigned port = 23;

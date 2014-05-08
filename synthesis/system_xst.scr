@@ -12,4 +12,4 @@ run
 -iobuf YES
 -max_fanout 10000
 -sd {../implementation}
--vlgincdir {"C:\Users\C15Kevin.Cooper\Desktop\Documents\ECE383\final_project_2\pcores\" "C:\Xilinx\Atlys_BSB_Support_v_3_6\Atlys_AXI_BSB_Support\lib\Digilent\pcores\" "C:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+-vlgincdir {"C:\Users\C15Kevin.Cooper\Desktop\Documents\ECE383\final_project_2\pcores\" "C:\Xilinx\Atlys_BSB_Support_v_3_6\Atlys_AXI_BSB_Support\lib\Digilent\pcores\" "C:\Users\C15Kevin.Cooper\Desktop\Documents\ECE383\final_project_2\pcores\MyProcessorIPLib\pcores\" "C:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }

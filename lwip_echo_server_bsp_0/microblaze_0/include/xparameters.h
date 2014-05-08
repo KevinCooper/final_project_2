@@ -268,6 +268,14 @@
 
 /******************************************************************/
 
+
+/* Definitions for peripheral PATTERN_MATCHER_0 */
+#define XPAR_PATTERN_MATCHER_0_BASEADDR 0x75E00000
+#define XPAR_PATTERN_MATCHER_0_HIGHADDR 0x75E0FFFF
+
+
+/******************************************************************/
+
 /* Definitions for bus frequencies */
 #define XPAR_CPU_M_AXI_DP_FREQ_HZ 100000000
 /******************************************************************/

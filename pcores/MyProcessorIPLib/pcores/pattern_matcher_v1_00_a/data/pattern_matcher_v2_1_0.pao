@@ -8,3 +8,8 @@ lib proc_common_v3_00_a  all
 lib axi_lite_ipif_v1_01_a  all 
 lib pattern_matcher_v1_00_a user_logic vhdl
 lib pattern_matcher_v1_00_a pattern_matcher vhdl
+lib pattern_matcher_v1_00_a pattern vhdl
+lib pattern_matcher_v1_00_a matcher_struct vhdl
+lib pattern_matcher_v1_00_a shifter vhdl
+lib pattern_matcher_v1_00_a template_matcher_struct vhdl
+

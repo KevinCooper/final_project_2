@@ -1,53 +1,3 @@
-------------------------------------------------------------------------------
--- user_logic.vhd - entity/architecture pair
-------------------------------------------------------------------------------
---
--- ***************************************************************************
--- ** Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.            **
--- **                                                                       **
--- ** Xilinx, Inc.                                                          **
--- ** XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"         **
--- ** AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND       **
--- ** SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,        **
--- ** OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,        **
--- ** APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION           **
--- ** THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,     **
--- ** AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE      **
--- ** FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY              **
--- ** WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE               **
--- ** IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR        **
--- ** REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF       **
--- ** INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS       **
--- ** FOR A PARTICULAR PURPOSE.                                             **
--- **                                                                       **
--- ***************************************************************************
---
-------------------------------------------------------------------------------
--- Filename:          user_logic.vhd
--- Version:           1.00.a
--- Description:       User logic.
--- Date:              Tue May 06 23:04:53 2014 (by Create and Import Peripheral Wizard)
--- VHDL Standard:     VHDL'93
-------------------------------------------------------------------------------
--- Naming Conventions:
---   active low signals:                    "*_n"
---   clock signals:                         "clk", "clk_div#", "clk_#x"
---   reset signals:                         "rst", "rst_n"
---   generics:                              "C_*"
---   user defined types:                    "*_TYPE"
---   state machine next state:              "*_ns"
---   state machine current state:           "*_cs"
---   combinatorial signals:                 "*_com"
---   pipelined or register delay signals:   "*_d#"
---   counter signals:                       "*cnt*"
---   clock enable signals:                  "*_ce"
---   internal version of output port:       "*_i"
---   device pins:                           "*_pin"
---   ports:                                 "- Names begin with Uppercase"
---   processes:                             "*_PROCESS"
---   component instantiations:              "<ENTITY_>I_<#|FUNC>"
-------------------------------------------------------------------------------
-
 -- DO NOT EDIT BELOW THIS LINE --------------------
 library ieee;
 use ieee.std_logic_1164.all;
@@ -98,6 +48,9 @@ entity user_logic is
   (
     -- ADD USER PORTS BELOW THIS LINE ------------------
     --USER ports added here
+    clk: in std_logic;
+    reset: in std_logic;
+    LED : out std_logic_vector(7 downto 0);
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -130,6 +83,9 @@ end entity user_logic;
 architecture IMP of user_logic is
 
   --USER signal declarations added here, as needed for user logic
+  signal bad: std_logic;
+  signal debug: std_logic_vector(7 downto 0);
+  signal alt: std_logic;
 
   ------------------------------------------
   -- Signals for user logic slave model s/w accessible register example
@@ -145,6 +101,17 @@ begin
 
   --USER logic implementation added here
 
+  patterns: entity work.pattern
+      port map(
+        clk => clk,
+        reset => '0',
+        test => slv_reg0(7 downto 0),
+        alt => slv_reg0(16),
+        bad => bad,
+        debug => debug
+      );
+      alt <= slv_reg0(16);
+      LED <= alt & slv_reg0(6 downto 0);
   ------------------------------------------
   -- Example code to read/write user logic slave model s/w accessible registers
   -- 
@@ -195,7 +162,7 @@ begin
   begin
 
     case slv_reg_read_sel is
-      when "1" => slv_ip2bus_data <= slv_reg0;
+      when "1" => slv_ip2bus_data <= bad & "0111111" & slv_reg0(23 downto 17) & alt & debug & slv_reg0(7 downto 0);     --slv_reg0;
       when others => slv_ip2bus_data <= (others => '0');
     end case;
 

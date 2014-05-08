@@ -42,7 +42,8 @@ entity system_stub is
     Ethernet_Lite_MDIO : inout std_logic;
     Ethernet_Lite_MDC : out std_logic;
     Ethernet_Lite_CRS : in std_logic;
-    Ethernet_Lite_COL : in std_logic
+    Ethernet_Lite_COL : in std_logic;
+    pattern_matcher_0_LED_pin : out std_logic_vector(7 downto 0)
   );
 end system_stub;
 
@@ -83,7 +84,8 @@ architecture STRUCTURE of system_stub is
       Ethernet_Lite_MDIO : inout std_logic;
       Ethernet_Lite_MDC : out std_logic;
       Ethernet_Lite_CRS : in std_logic;
-      Ethernet_Lite_COL : in std_logic
+      Ethernet_Lite_COL : in std_logic;
+      pattern_matcher_0_LED_pin : out std_logic_vector(7 downto 0)
     );
   end component;
 
@@ -130,7 +132,8 @@ begin
       Ethernet_Lite_MDIO => Ethernet_Lite_MDIO,
       Ethernet_Lite_MDC => Ethernet_Lite_MDC,
       Ethernet_Lite_CRS => Ethernet_Lite_CRS,
-      Ethernet_Lite_COL => Ethernet_Lite_COL
+      Ethernet_Lite_COL => Ethernet_Lite_COL,
+      pattern_matcher_0_LED_pin => pattern_matcher_0_LED_pin
     );
 
 end architecture STRUCTURE;
