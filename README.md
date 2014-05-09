@@ -55,7 +55,7 @@ THe last step was determining how to get the received data from the Microblaze p
 
 #### Project Report ####
 
-[Interactive EDK Design Report](https://rawgithub.com/KevinCooper/final_project_2/images/report/system.html)
+[Interactive EDK Design Report](https://rawgit.com/KevinCooper/final_project_2/master/images/report/system.html)
 
 ### Pattern Matcher Diagram ###
 
