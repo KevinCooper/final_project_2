@@ -63,6 +63,10 @@ THe last step was determining how to get the received data from the Microblaze p
  
 ### C Call Diagram ###
 
+<p align="center">
+  <img src="images/call_main.PNG" />
+</p>
+
 ![CallDiagram](images/call_main.PNG)
 
 ### Ethernet ###
