@@ -19,6 +19,9 @@
 - [Documentation](#documentation)
 
 ## Introduction ##
+
+[Lab Link](http://ece383.com/labs/lab5/)
+
 The purpose of this project was to propose our own project.  This included a sign-off schedule, design, build and testing of my proposed design.  In addition to technical work, a final presentation, report and video must be included in the project to demonstrate understanding.  The project was graded off the following criteria:
 
  1. Complexity of hardware and software design
@@ -37,9 +40,9 @@ During the implementation of the project, it was determined that the B functiona
 ## Approach ##
 As given in the levels of functionality, Ethernet needed to be implemented in order for anything further to be accomplished for this project.  After several attempts to implement a simple IP stack using the Ethernet Lite module provided by Xilinx CORE, the design was made to use the provided Microblaze implementation of Ethernet.
 
-Once the problem of how Ethernet was going to be received, the contents of the packets needed to be displayed to the serial connection of the computer to verify that results matching their expected outputs.  The best way to achieve this was using the UART implementation from a previous lab.
+Once the problem of how Ethernet was going to be received, the contents of the packets needed to be displayed to the serial connection of the computer to verify that results matched their expected outputs.  The best way to achieve this was using the UART implementation from a previous lab.
 
-THe last step was determining how to get the received data from the Microblaze processor to my custom peripheral that did the pattern matching.  Once that was achieved, getting a signal back from the module was necessary in order to visually determine over the serial connection whether a bad packet had been detected.
+The last step was determining how to get the received data from the Microblaze processor to my custom peripheral that did the pattern matching.  Once that was achieved, getting a signal back from the module was necessary in order to visually determine over the serial connection whether a bad packet had been detected.
 
 ## Implementation ##
 
@@ -70,7 +73,7 @@ THe last step was determining how to get the received data from the Microblaze p
 ### Ethernet ###
 Attempting to get Ethernet to work purely in VHDL, which would have simplified design greatly later on, proved to be difficult in the constrained amount of time for this project.  Microblaze was used in order to use the Xilinx peripheral and provided C code to receive packets over the network. Included libraries greatly sped up C code development.
 ### Pattern Matching ###
-The pattern matching ended up following a simple and very easily extendable approach to identifying packets.  Information is streamed into the the module.  As the data moves through the stream buffer, those bytes are compared in order to another module which contains the byte sequence logic to detect a bad pattern.  If any of the detection modules returns true, the pattern matcher is able to determine a positive match has been found. An example of the sequence detection:
+The pattern matching followed a simple and easily extendable approach to identifying packets.  Information is streamed into the the module one byte at a time.  As the data moves through the stream buffer, those bytes are compared in order to another module which contains the byte sequence logic to detect a bad pattern.  If any of the detection modules returns true, the pattern matcher is able to determine a positive match has been found. An example of the sequence detection:
 ```vhdl
 /* The following returns true when "bad" is detected in a sequence of data */
 match <= '1' when word_one=x"62" and word_two=x"61" and word_three=x"64"
@@ -130,4 +133,5 @@ A youtube video showcasing the project can be found at [incredible video](http:/
 
 ## Documentation ##
 The FIFO used to stream in the pattern matcher was pulled from a design off the internet.  The link is in the appropriate file.
-C2C Parks found a bug where I was using Uart input instead of Xil_In to read data from the pattern matcher
+C2C William Parks found a bug where I was using Uart input instead of Xil_In to read data from the pattern matcher
+C2C Jonathan Remiasz
