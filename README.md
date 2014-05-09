@@ -18,9 +18,6 @@
 - [Conclusion](#conclusion)
 - [Documentation](#documentation)
 
-
-![diagram](images/diagram.PNG)
-
 ## Introduction ##
 The purpose of this project was to propose our own project.  This included a sign-off schedule, design, build and testing of my proposed design.  In addition to technical work, a final presentation, report and video must be included in the project to demonstrate understanding.  The project was graded off the following criteria:
 
@@ -58,7 +55,7 @@ THe last step was determining how to get the received data from the Microblaze p
 
 #### Project Report ####
 
-[Interactive EDK Design Report](images/report/system.html)
+[Interactive EDK Design Report](https://rawgithub.com/KevinCooper/final_project_2/tree/master/images/reportsystem.html)
 
 ### Pattern Matcher Diagram ###
 
