@@ -11,6 +11,7 @@
     - [Ethernet](#ethernet)
     - [Pattern Matching](#pattern-matching)
     - [Working Together](#working-together)
+    - [Theoretical performance](#theoretical-performance)
 - [Testing and Debugging](#testing-and-debugging)
     - [Microblaze Ethernet](#microblaze-ethernet)
     - [Pattern Matching Hardware](#pattern-matching-hardware)
@@ -94,6 +95,12 @@ for (i = 0; i < p->len; i++){
 }
 ```
 
+### Theoretical Performance ###
+
+The theoretical speed which the pattern recognition circuit is capable of running at is 8 bits at 100MHz.  At this speed, the pattern recognition circuit could process at speeds of .8gbps. Including additional rulesets would not affect performance due to the parallel nature that the rule circuits are attached to the streaming data.  By attaching another set of rules to streaming data, but offset by one, two or three... The bandwidth of the device would theoretically double, triple, or quadruple respectively.
+
+The above is dependent upon the input and output speeds of the Ethernet ports and their instantiation in a purely hardware manner without a processor managing the incoming packets.
+
 ## Testing and Debugging ##
 
 ### Microblaze Ethernet ###
@@ -134,4 +141,5 @@ A youtube video showcasing the project can be found at [incredible video](http:/
 ## Documentation ##
 The FIFO used to stream in the pattern matcher was pulled from a design off the internet.  The link is in the appropriate file.
 C2C William Parks found a bug where I was using Uart input instead of Xil_In to read data from the pattern matcher
+
 C2C Jonathan Remiasz
