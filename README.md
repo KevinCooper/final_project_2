@@ -47,11 +47,15 @@ THe last step was determining how to get the received data from the Microblaze p
 
 #### Block Diagram ####
 
-![TopShell](images/system.jpg)
+<p align="center">
+  <img src="images/system.jpg" />
+</p>
 
 #### Graphical Design Diagram ####
 
-![TopShell](images/diagram.PNG)
+<p align="center">
+  <img src="images/diagram.PNG" />
+</p>
 
 #### Project Report ####
 
@@ -59,15 +63,15 @@ THe last step was determining how to get the received data from the Microblaze p
 
 ### Pattern Matcher Diagram ###
 
-![PatternMatcher](images/pattern.PNG)
- 
+<p align="center">
+  <img src="images/pattern.PNG" />
+</p>
+
 ### C Call Diagram ###
 
 <p align="center">
   <img src="images/call_main.PNG" />
 </p>
-
-![CallDiagram](images/call_main.PNG)
 
 ### Ethernet ###
 
