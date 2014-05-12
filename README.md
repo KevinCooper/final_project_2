@@ -140,6 +140,7 @@ A youtube video showcasing the project can be found at [incredible video](http:/
 
 ## Documentation ##
 The FIFO used to stream in the pattern matcher was pulled from a design off the internet.  The link is in the appropriate file.
+
 C2C William Parks found a bug where I was using Uart input instead of Xil_In to read data from the pattern matcher
 
-C2C Jonathan Remiasz
+C2C Jonathan Remiasz helped with a few grammatical that popped up from late night writing 
